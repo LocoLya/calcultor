@@ -1,0 +1,98 @@
+body {
+  box-sizing: border-box;
+} 
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+.A { grid-area: a; }
+
+.B { grid-area: b; }
+.C { grid-area: c; }
+.D { grid-area: d; }
+.E { grid-area: e; }
+
+.F { grid-area: f; }
+.G { grid-area: g; }
+.H { grid-area: h; }
+.F2 { grid-area: f2; }
+.G2 { grid-area: g2; }
+.H2 { grid-area: h2; }
+.F3 { grid-area: f3; }
+.G3 { grid-area: g3; }
+.H3 { grid-area: h3; }
+
+.J { grid-area: j; }
+.J2 { grid-area: j2; }
+.J3 { grid-area: j3; }
+
+.K4 { grid-area: k4; }
+.G4 { grid-area: g4; }
+.R4 { grid-area: r4; }
+
+
+.calc {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 0 5px;
+  
+}
+
+
+.form {
+  display: grid;
+  gap: 1px;
+  grid-template-areas:  "a a a a"
+                        "b c d e"
+                        "f g h j"
+                        "f2 g2 h2 j2"
+                        "f3 g3 h3 j3"
+                        "k4 g4 r4 r4" 
+                        ;
+}
+
+
+.calcInput {
+  height: 70px;
+  font-size: 30px;
+  background-color: rgb(153, 153, 153);
+  /* direction: rtl; */
+  padding: 0 10px;
+  outline: none;
+  caret-color: transparent;
+  width: 100%;
+  border: 0;
+  
+}
+
+button {
+  height: 70px;
+  background-color: rgb(6, 139, 73);
+  width: 100%;
+  border-color: rgb(153, 153, 153);
+  font-size: 30px;
+
+}
+
+.title {
+  font-size: 50px;
+  font-weight: 700;
+  text-align: center;
+  padding: 10px 0 20px;
+  color: rgb(6, 139, 73);
+}
+
+@media (max-width: 768px) {
+
+  .title {
+    padding-top: 40px;
+  }
+
+  .calcInput,
+  button {
+    height: 80px;
+  }
+}
